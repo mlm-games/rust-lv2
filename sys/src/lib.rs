@@ -9,6 +9,8 @@
 
 #[cfg_attr(target_os = "linux", path = "linux/mod.rs")]
 #[cfg_attr(target_os = "android", path = "linux/mod.rs")]
+#[cfg_attr(target_os = "freebsd", path = "linux/mod.rs")]
+#[cfg_attr(target_os = "macos", path = "linux/mod.rs")]
 #[cfg_attr(target_os = "windows", path = "windows.rs")]
 mod unsupported;
 pub use unsupported::*;
