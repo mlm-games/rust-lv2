@@ -7,25 +7,8 @@
 #![allow(clippy::all)]
 #![allow(rustdoc::bare_urls)]
 
-#[cfg_attr(any(
-    target_os = "linux",
-    target_os = "android",
-    target_os = "freebsd",
-    target_os = "netbsd",
-    target_os = "openbsd",
-    target_os = "dragonfly",
-    target_os = "macos",
-    target_os = "ios",
-    target_os = "illumos",
-    target_os = "solaris",
-    target_os = "haiku",
-    target_os = "redox",
-    target_os = "fuchsia",
-    target_os = "hermit",
-), path = "linux/mod.rs")]
-#[cfg_attr(target_os = "windows", path = "windows.rs")]
-mod unsupported;
-pub use unsupported::*;
+mod bindings;
+pub use bindings::*;
 
 impl From<u32> for LV2_State_Flags {
     fn from(flags: u32) -> Self {
