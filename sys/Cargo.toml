@@ -2,7 +2,7 @@
 name = "lv2-sys"
 version = "2.0.0"
 authors = ["Jan-Oliver 'Janonard' Opdenhövel <jan.opdenhoevel@protonmail.com>"]
-edition = "2018"
+edition = "2024"
 license = "MIT OR Apache-2.0"
 
 description = "rust-lv2's C header bindings"
