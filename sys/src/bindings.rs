@@ -772,7 +772,7 @@ pub struct LV2_Atom_Object_Query {
     pub key: u32,
     pub value: *mut *const LV2_Atom,
 }
-extern "C" {
+unsafe extern "C" {
     pub static LV2_ATOM_OBJECT_QUERY_END: LV2_Atom_Object_Query;
 }
 pub type LV2_URID_Map_Handle = *mut ::std::os::raw::c_void;
